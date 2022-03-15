@@ -130,15 +130,21 @@ export default function App() {
       <HashRouter>
         <AppWrapper>
           <LanguageContext.Provider
-            value={{ selectedLanguage, setSelectedLanguage: handleLanguageSelect, translatedLanguage, setTranslatedLanguage }}
-                 > <Web3ReactManager>
-                             <Switch>
-
-            <TranslationsContext.Provider value={{ translations, setTranslations }}>
-              <Menu>
-                <BodyWrapper>
-                  <Popups />
-                      <Route exact strict path="/swap" component={Swap} />
+            value={{
+              selectedLanguage,
+              setSelectedLanguage: handleLanguageSelect,
+              translatedLanguage,
+              setTranslatedLanguage,
+            }}
+          >
+            {' '}
+            <Web3ReactManager>
+              <Switch>
+                <TranslationsContext.Provider value={{ translations, setTranslations }}>
+                  <Menu>
+                    <BodyWrapper>
+                      <Popups />
+                      {/* <Route exact strict path="/swap" component={Swap} /> */}
                       <Route exact strict path="/find" component={PoolFinder} />
                       <Route exact strict path="/pool" component={Pool} />
                       <Route exact path="/add" component={AddLiquidity} />
@@ -154,14 +160,12 @@ export default function App() {
                       <Route exact strict path="/" component={Home} />
 
                       {/* <Route component={RedirectPathToSwapOnly} /> */}
-                  <Marginer />
-                </BodyWrapper>
-              </Menu>
-
-            </TranslationsContext.Provider>
-            </Switch>
+                      <Marginer />
+                    </BodyWrapper>
+                  </Menu>
+                </TranslationsContext.Provider>
+              </Switch>
             </Web3ReactManager>
-
           </LanguageContext.Provider>
         </AppWrapper>
       </HashRouter>

@@ -283,30 +283,22 @@ const Swap = () => {
       <section className="defi_main">
         <div className="container ">
           <div className="row">
-          <div
-              //  className="custom_logo_set"
-              >
-                  <img src={logo} />
-              </div>
+            <div
+            //  className="custom_logo_set"
+            >
+              <img src={logo} />
+            </div>
             <div className="col-md-8 offset-md-2">
-             
               <div className="defi_heading">
                 <img src={Cake} />
                 <h1>Connect with wireswap and bridge the gap</h1>
-                <p>
-                Swap, earn, yield stacks, welcome to the community driven platform, the home to DeFi.
-                </p>
+                <p>Swap, earn, yield stacks, welcome to the community driven platform, the home to DeFi.</p>
               </div>
-              <div className="defi_btn" >
-                <a href="/#/swap" className="btn button defi_button_bg mr_btn"
-                style={{marginTop:"5px"}}
-                >
+              <div className="defi_btn">
+                <a href="/#/swap" className="btn button defi_button_bg mr_btn" style={{ marginTop: '5px' }}>
                   Enter App
                 </a>
-                <a href="#" className="btn button"
-                style={{marginTop:"5px"}}
-                
-                >
+                <a href="#" className="btn button" style={{ marginTop: '5px' }}>
                   Learn More
                 </a>
               </div>
@@ -315,14 +307,14 @@ const Swap = () => {
               <div className="row">
                 <div className="col-md-3">
                   <div className="defi_price_box">
-                  <h1>Coming Soon</h1>
+                    <h1>Coming Soon</h1>
 
                     <p>$Wireswap Price</p>
                   </div>
                 </div>
                 <div className="col-md-3">
                   <div className="defi_price_box">
-                  <h1>Coming Soon</h1>
+                    <h1>Coming Soon</h1>
 
                     <p>Total Liquidity</p>
                   </div>
@@ -335,7 +327,7 @@ const Swap = () => {
                 </div>
                 <div className="col-md-3">
                   <div className="defi_price_box">
-                  <h1>Coming Soon</h1>
+                    <h1>Coming Soon</h1>
 
                     <p>Total Pairs</p>
                   </div>
