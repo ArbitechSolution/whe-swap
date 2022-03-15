@@ -144,7 +144,7 @@ export default function App() {
                   <Menu>
                     <BodyWrapper>
                       <Popups />
-                      {/* <Route exact strict path="/swap" component={Swap} /> */}
+                      <Route exact strict path="/swap" component={Swap} />
                       <Route exact strict path="/find" component={PoolFinder} />
                       <Route exact strict path="/pool" component={Pool} />
                       <Route exact path="/add" component={AddLiquidity} />
