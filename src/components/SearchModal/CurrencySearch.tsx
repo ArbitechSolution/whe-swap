@@ -52,6 +52,9 @@ export function CurrencySearch({
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [invertSearchOrder, setInvertSearchOrder] = useState<boolean>(false)
   const allTokens = useAllTokens()
+  const tokenComparator = useTokenComparator(invertSearchOrder)
+  const audioPlay = useSelector<AppState, AppState['user']['audioPlay']>((state) => state.user.audioPlay)
+
   // if they input an address, use it
   const isAddressSearch = isAddress(searchQuery)
   const searchToken = useToken(searchQuery)
@@ -61,10 +64,6 @@ export function CurrencySearch({
     return s === '' || s === 'b' || s === 'bn' || s === 'bnb'
   }, [searchQuery])
 
-  const tokenComparator = useTokenComparator(invertSearchOrder)
-
-  const audioPlay = useSelector<AppState, AppState['user']['audioPlay']>((state) => state.user.audioPlay)
-
   const filteredTokens: Token[] = useMemo(() => {
     if (isAddressSearch) return searchToken ? [searchToken] : []
     return filterTokens(Object.values(allTokens), searchQuery)
@@ -73,6 +72,7 @@ export function CurrencySearch({
   const filteredSortedTokens: Token[] = useMemo(() => {
     if (searchToken) return [searchToken]
     const sorted = filteredTokens.sort(tokenComparator)
+
     const symbolMatch = searchQuery
       .toLowerCase()
       .split(/\s+/)
@@ -86,7 +86,11 @@ export function CurrencySearch({
       ...sorted.filter((token) => token.symbol?.toLowerCase() !== symbolMatch[0]),
     ]
   }, [filteredTokens, searchQuery, searchToken, tokenComparator])
-
+  {
+    console.log('filteredSortedTokens', filteredSortedTokens)
+    console.log('filteredTokens', filteredTokens)
+    console.log('allTokens', allTokens)
+  }
   const handleCurrencySelect = useCallback(
     (currency: Currency) => {
       onCurrencySelect(currency)
@@ -119,6 +123,7 @@ export function CurrencySearch({
     (e: KeyboardEvent<HTMLInputElement>) => {
       if (e.key === 'Enter') {
         const s = searchQuery.toLowerCase().trim()
+
         if (s === 'bnb') {
           handleCurrencySelect(ETHER)
         } else if (filteredSortedTokens.length > 0) {
@@ -133,7 +138,8 @@ export function CurrencySearch({
     },
     [filteredSortedTokens, handleCurrencySelect, searchQuery]
   )
-
+  {
+  }
   const selectedListInfo = useSelectedListInfo()
   const TranslateString = useI18n()
   return (

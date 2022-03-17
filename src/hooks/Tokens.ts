@@ -6,7 +6,6 @@ import { NEVER_RELOAD, useSingleCallResult } from '../state/multicall/hooks'
 // eslint-disable-next-line import/no-cycle
 import { useUserAddedTokens } from '../state/user/hooks'
 import { isAddress } from '../utils'
-
 import { useActiveWeb3React } from './index'
 import { useBytes32TokenContract, useTokenContract } from './useContract'
 

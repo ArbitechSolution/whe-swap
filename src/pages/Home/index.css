@@ -53,7 +53,7 @@
 .kCznXV {
   background-image: url(./backgeoundimg.jpg) !important;
   background-repeat: no-repeat;
-  background-position: center 0px, 10% 230px, 90% 230px !important;
+  background-position: center 5px, 10% 230px, 90% 230px !important;
   /* background-size: contain, 266px, 266px; */
   min-height: 80vh !important;
   /* height: 100vh !important; */
@@ -66,6 +66,7 @@ body {
 }
 .huihyY .desktop-icon {
   width: 50px !important;
+  margin: 10px 0px !important;
 }
 h1,
 h2,
