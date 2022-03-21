@@ -19,7 +19,7 @@ export function isAddress(value: any): string | false {
 
 const BSCSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   56: '',
-  97: 'testnet.'
+  97: 'testnet.',
 }
 
 export function getBscScanLink(chainId: ChainId, data: string, type: 'transaction' | 'token' | 'address'): string {
@@ -64,7 +64,7 @@ export function calculateSlippageAmount(value: CurrencyAmount, slippage: number)
   }
   return [
     JSBI.divide(JSBI.multiply(value.raw, JSBI.BigInt(10000 - slippage)), JSBI.BigInt(10000)),
-    JSBI.divide(JSBI.multiply(value.raw, JSBI.BigInt(10000 + slippage)), JSBI.BigInt(10000))
+    JSBI.divide(JSBI.multiply(value.raw, JSBI.BigInt(10000 + slippage)), JSBI.BigInt(10000)),
   ]
 }
 
@@ -79,7 +79,7 @@ export function getProviderOrSigner(library: Web3Provider, account?: string): We
 }
 
 // account is optional
-export function getContract(address: string, ABI: any, library: Web3Provider|any, account?: string|any): Contract {
+export function getContract(address: string, ABI: any, library: Web3Provider | any, account?: string | any): Contract {
   if (!isAddress(address) || address === AddressZero) {
     throw Error(`Invalid 'address' parameter '${address}'.`)
   }

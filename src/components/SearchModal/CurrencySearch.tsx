@@ -66,12 +66,22 @@ export function CurrencySearch({
 
   const filteredTokens: Token[] = useMemo(() => {
     if (isAddressSearch) return searchToken ? [searchToken] : []
-    return filterTokens(Object.values(allTokens), searchQuery)
+    {
+      // console.log(
+      //   'filterTokens(Object.values(allTokens), searchQuery) ',
+      //   filterTokens(Object.values(allTokens), searchQuery)
+      // )
+      // console.log('searchQuery', searchQuery)
+      // console.log('allllllll tokens', allTokens)
+      return filterTokens(Object.values(allTokens), searchQuery)
+    }
   }, [isAddressSearch, searchToken, allTokens, searchQuery])
 
   const filteredSortedTokens: Token[] = useMemo(() => {
     if (searchToken) return [searchToken]
     const sorted = filteredTokens.sort(tokenComparator)
+    // console.log('sorted  in  filteredSortedTokens currency search', sorted)
+    // console.log('filteredTokens  in  filteredSortedTokens currency search', filteredTokens)
 
     const symbolMatch = searchQuery
       .toLowerCase()
@@ -82,15 +92,16 @@ export function CurrencySearch({
     return [
       ...(searchToken ? [searchToken] : []),
       // sort any exact symbol matches first
+
       ...sorted.filter((token) => token.symbol?.toLowerCase() === symbolMatch[0]),
       ...sorted.filter((token) => token.symbol?.toLowerCase() !== symbolMatch[0]),
     ]
   }, [filteredTokens, searchQuery, searchToken, tokenComparator])
-  {
-    console.log('filteredSortedTokens', filteredSortedTokens)
-    console.log('filteredTokens', filteredTokens)
-    console.log('allTokens', allTokens)
-  }
+  // {
+  //   console.log('filteredSortedTokens  in currency search', filteredSortedTokens)
+  //   console.log('filteredTokens  in currency search', filteredTokens)
+  //   console.log('allTokens in currency search', allTokens)
+  // }
   const handleCurrencySelect = useCallback(
     (currency: Currency) => {
       onCurrencySelect(currency)

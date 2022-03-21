@@ -13,7 +13,9 @@ export function useAllTokens(): { [address: string]: Token } {
   const { chainId } = useActiveWeb3React()
   const userAddedTokens = useUserAddedTokens()
   const allTokens = useSelectedTokenList()
-
+  // console.log('allTokens in token hooks', allTokens)
+  // console.log('chainId in token hooks', chainId)
+  // console.log('userAddedTokens in token hooks', userAddedTokens)
   return useMemo(() => {
     if (!chainId) return {}
     return (
@@ -54,7 +56,6 @@ function parseStringOrBytes32(str: string | undefined, bytes32: string | undefin
 export function useToken(tokenAddress?: string): Token | undefined | null {
   const { chainId } = useActiveWeb3React()
   const tokens = useAllTokens()
-
   const address = isAddress(tokenAddress)
 
   const tokenContract = useTokenContract(address || undefined, false)

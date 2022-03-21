@@ -170,11 +170,11 @@ export default function CurrencyList({
   showETH: boolean
 }) {
   const itemData = useMemo(() => (showETH ? [Currency.ETHER, ...currencies] : [...currencies]), [currencies, showETH])
-  console.log('itemData', itemData)
+  // console.log('itemData', itemData)
+  // console.log('currencies in currency list', currencies)
   const Row = useCallback(
     ({ data, index, style }) => {
       const currency: Currency = data[index]
-      console.log('currency')
       const isSelected = Boolean(selectedCurrency && currencyEquals(selectedCurrency, currency))
       const otherSelected = Boolean(otherCurrency && currencyEquals(otherCurrency, currency))
       const handleSelect = () => onCurrencySelect(currency)

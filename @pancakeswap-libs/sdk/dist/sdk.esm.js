@@ -32,8 +32,8 @@ var Rounding
   Rounding[(Rounding['ROUND_UP'] = 2)] = 'ROUND_UP'
 })(Rounding || (Rounding = {}))
 
-var FACTORY_ADDRESS = '0xd5a2843f57bCB56D8126589b2A4b5c417cFB3283'
-var INIT_CODE_HASH = '0xe1a4292e78925c53bcb106503ec2c9a30c35f3fde4c084afc5af611bcffde55b'
+var FACTORY_ADDRESS = '0xD9DBe9B223491c170522611002026671c81DDCC9'
+var INIT_CODE_HASH = '0900094b1df5db1479b9484900ab524d1c832680efa977f8636c14ba835c74b6'
 var MINIMUM_LIQUIDITY = /*#__PURE__*/ JSBI.BigInt(1000) // exports for internal consumption
 
 var ZERO = /*#__PURE__*/ JSBI.BigInt(0)

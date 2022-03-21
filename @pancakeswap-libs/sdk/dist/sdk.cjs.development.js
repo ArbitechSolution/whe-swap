@@ -20,25 +20,22 @@ var providers = require('@ethersproject/providers')
 var IUniswapV2Pair = _interopDefault(require('@uniswap/v2-core/build/IUniswapV2Pair.json'))
 
 var _SOLIDITY_TYPE_MAXIMA
-
 ;(function (ChainId) {
   ChainId[(ChainId['MAINNET'] = 56)] = 'MAINNET'
   ChainId[(ChainId['BSCTESTNET'] = 97)] = 'BSCTESTNET'
 })(exports.ChainId || (exports.ChainId = {}))
-
 ;(function (TradeType) {
   TradeType[(TradeType['EXACT_INPUT'] = 0)] = 'EXACT_INPUT'
   TradeType[(TradeType['EXACT_OUTPUT'] = 1)] = 'EXACT_OUTPUT'
 })(exports.TradeType || (exports.TradeType = {}))
-
 ;(function (Rounding) {
   Rounding[(Rounding['ROUND_DOWN'] = 0)] = 'ROUND_DOWN'
   Rounding[(Rounding['ROUND_HALF_UP'] = 1)] = 'ROUND_HALF_UP'
   Rounding[(Rounding['ROUND_UP'] = 2)] = 'ROUND_UP'
 })(exports.Rounding || (exports.Rounding = {}))
 
-var FACTORY_ADDRESS = '0xd5a2843f57bCB56D8126589b2A4b5c417cFB3283'
-var INIT_CODE_HASH = '0xe1a4292e78925c53bcb106503ec2c9a30c35f3fde4c084afc5af611bcffde55b'
+var FACTORY_ADDRESS = '0xD9DBe9B223491c170522611002026671c81DDCC9'
+var INIT_CODE_HASH = '0900094b1df5db1479b9484900ab524d1c832680efa977f8636c14ba835c74b6'
 var MINIMUM_LIQUIDITY = /*#__PURE__*/ JSBI.BigInt(1000) // exports for internal consumption
 
 var ZERO = /*#__PURE__*/ JSBI.BigInt(0)
@@ -51,7 +48,6 @@ var _100 = /*#__PURE__*/ JSBI.BigInt(100)
 var _997 = /*#__PURE__*/ JSBI.BigInt(997)
 var _1000 = /*#__PURE__*/ JSBI.BigInt(1000)
 var SolidityType
-
 ;(function (SolidityType) {
   SolidityType['uint8'] = 'uint8'
   SolidityType['uint256'] = 'uint256'
