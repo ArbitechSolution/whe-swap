@@ -49,13 +49,13 @@
   justify-content: center;
   background-repeat: no-repeat;
   background-position: bottom 24px center;
-  background-size: 80% !important;
+  background-size: 100% !important;
 }
 .kCznXV,
 .fVTnYc {
   background-image: url(./backgeoundimg.jpg) !important;
   background-repeat: no-repeat;
-  background-position: center 5px, 10% 230px, 90% 230px !important;
+  background-position: center 0px, 10% 230px, 90% 230px !important;
   /* background-size: contain, 266px, 266px; */
   min-height: 80vh !important;
   /* height: 100vh !important; */
@@ -165,6 +165,13 @@ li {
     top: -33px;
     left: 16px;
   }
+}
+.logo_wheswap img {
+  width: 50px !important;
+  height: 50px !important;
+}
+.logo_wheswap {
+  margin-top: 48px !important;
 }
 .bp_heading h2 a span {
 }

@@ -22,11 +22,11 @@ const config: MenuEntry[] = [
     ],
   },
 
-  {
-    label: 'Pools',
-    icon: 'PoolIcon',
-    href: 'https://pool.wireswap.io',
-  },
+  // {
+  //   label: 'Pools',
+  //   icon: 'PoolIcon',
+  //   href: 'https://pool.wireswap.io',
+  // },
   {
     label: 'Farms',
     icon: 'FarmIcon',
@@ -35,12 +35,12 @@ const config: MenuEntry[] = [
   {
     label: 'Game',
     icon: 'TeamBattleIcon',
-    href: 'https://game.wireswap.io/',
+    href: '/swap',
   },
   {
     label: 'Game 2',
     icon: 'TeamBattleIcon',
-    href: 'https://game2.wireswap.io/',
+    href: 'https://unruffled-curran-47a540.netlify.app/',
   },
   // ,
   // {
