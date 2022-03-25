@@ -26,7 +26,8 @@
   z-index: 9;
 }
 .kCznXV,
-.fVTnYc {
+.fVTnYc,
+.fWXwGX {
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -52,7 +53,8 @@
   background-size: 100% !important;
 }
 .kCznXV,
-.fVTnYc {
+.fVTnYc,
+.fWXwGX {
   background-image: url(./backgeoundimg.jpg) !important;
   background-repeat: no-repeat;
   background-position: center 0px, 10% 230px, 90% 230px !important;

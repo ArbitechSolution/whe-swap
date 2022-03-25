@@ -2,7 +2,8 @@
   background-color: transparent !important;
 }
 .hhFJlm,
-.evumGo {
+.evumGo,
+.hdoSbV {
   /* background-color: #161522 !important; */
   background-color: #fff !important;
   color: #000 !important;
@@ -59,7 +60,8 @@
 }
 .eSvlCC,
 .gcuAnX,
-.fUsIex {
+.fUsIex,
+.VUrNH {
   color: #000 !important;
   background-color: #e5e7e7 !important;
 }
@@ -170,7 +172,8 @@
   opacity: 1 !important;
 }
 .jzgrgs,
-.gudCje {
+.gudCje,
+.bKuZXg {
   background-color: #fff !important;
   color: black !important;
 }
@@ -192,27 +195,32 @@
   border: 1px solid #e5e7e7;
 }
 .hSFnST,
-.iZlugh {
+.iZlugh,
+.fqDZcL {
   color: black !important;
 }
 .hjKPmy,
-.CXMyy {
+.CXMyy,
+.eLDzjK {
   fill: black !important;
 }
 .fsSeeb,
-.hGkMvb {
+.hGkMvb,
+.gEMbSb {
   color: black !important;
 }
 .bTDxgI {
   background-color: #1263f1 !important;
 }
 .joKvYL,
-.kWqKKK {
+.kWqKKK,
+.kIJjpa {
   background-color: #1263f1 !important;
 }
 .jRNEBu,
 .fwjcqd,
-.jJOcej {
+.jJOcej,
+.IYzyH {
   background-color: transparent !important;
 }
 .token-amount-input::placeholder {
@@ -239,17 +247,20 @@
   background: transparent !important;
 }
 .emvnVi,
-.bQrGOq {
+.bQrGOq,
+.dpsoee {
   color: rgb(7, 22, 45) !important;
 }
 .PZmzo,
-.hGwVBF {
+.hGwVBF,
+.kOVBQR {
   background-color: #1263f1 !important;
   box-shadow: none !important;
   opacity: 1 !important;
 }
 .PZmzo:hover,
-.hGwVBF:hover {
+.hGwVBF:hover,
+.kOVBQR:hover {
   background-color: rgb(18, 99, 241);
   box-shadow: none !important;
   opacity: 0.85 !important;
@@ -263,14 +274,18 @@
 .hiRMEQ,
 .leKiKm,
 .fZeXOz,
-.itigIp {
+.jGckDC,
+.itigIp,
+.cJnpLQ,
+.BdYgq {
   background-color: #e5e7e7 !important;
   border: 1px solid #e5e7e7 !important;
   color: #000 !important;
   box-shadow: none !important;
 }
 .hiRMEQ::placeholder,
-.fZeXOz::placeholder {
+.fZeXOz::placeholder,
+.jGckDC::placeholder {
   color: #000 !important;
 }
 /* .leKiKm {
@@ -288,6 +303,8 @@
 .kcqjcQ,
 .dZNSBp,
 .dZNSBp,
+.JCafF,
+.cFaqJ,
 .fKnxHN {
   background-color: #e5e7e7 !important;
   color: #000 !important;
@@ -325,19 +342,25 @@
 .icyjVL,
 .bCLZBw:hover,
 .ilrUOc:hover,
+.bCLZBw:hover,
 .hSCCHK:hover,
 .IahEH:hover,
 .fqPRzO:hover,
-.eIaIqp:hover,
+.ilDUPL:hover,
 .djnXaA:hover,
+.eIaIqp:hover,
+.gEMbSb:hover,
 .cNGgVS:hover,
 .bCLZBw:hover .fsSeeb,
 .ilrUOc:hover .hGkMvb,
 .cNGgVS:hover .hGkMvb,
-.hSCCHK:hover .fsSeeb {
+.bCLZBw:hover .gEMbSb,
+.hSCCHK:hover .gEMbSb,
+.gEMbSb .hSCCHK:hover .fsSeeb {
   background-color: #e5e7e7 !important;
 }
 .eIaIqp:focus,
+.gEMbSb:focus,
 .IahEH:focus {
   background-color: #e5e7e7 !important;
 }
@@ -413,7 +436,8 @@
 }
 .eSvlCC:hover,
 .gcuAnX:hover,
-.fUsIex:hover {
+.fUsIex:hover,
+.VUrNH:hover {
   background-color: #071731 !important;
   opacity: 1 !important;
   color: #fff !important;
@@ -423,7 +447,11 @@
 .hSTWmr,
 .hSTWmr:hover,
 .itigIp,
-.itigIp:hover {
+.cJnpLQ,
+.BdYgq,
+.cJnpLQ:hover,
+.itigIp:hover,
+.BdYgq:hover {
   background-color: #e5e7e7 !important;
   color: #000 !important;
 }
@@ -439,7 +467,8 @@
   margin-top: 10px !important;
 }
 .kdxFnu,
-.cWctTA {
+.cWctTA,
+.geAhhC {
   margin: 10px 20px !important ;
   padding: 20px 40px 0px 0px !important;
 }
