@@ -1,5 +1,5 @@
 .body {
-  background-image: url('./wire_bg.jpg') !important;
+  /* background-image: url('./wire_bg.jpg') !important; */
   height: 100%;
   background-position: center;
   background-size: cover;
@@ -50,7 +50,7 @@
   justify-content: center;
   background-repeat: no-repeat;
   background-position: bottom 24px center;
-  background-size: 100% !important;
+  /* background-size: 100% !important; */
 }
 .kCznXV,
 .fVTnYc,
@@ -58,9 +58,16 @@
   background-image: url(./backgeoundimg.jpg) !important;
   background-repeat: no-repeat;
   background-position: center 0px, 10% 230px, 90% 230px !important;
-  /* background-size: contain, 266px, 266px; */
+  background-size: contain, 100, 100;
   min-height: 80vh !important;
   /* height: 100vh !important; */
+}
+
+@media (max-width: 480px) {
+  .kCznXV,
+  .fVTnYc {
+    padding: 0 10px !important;
+  }
 }
 body {
   font-family: Kanit, sans-serif !important;

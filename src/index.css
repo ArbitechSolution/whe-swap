@@ -483,3 +483,8 @@
   width: 50px !important;
   margin: 10px 0px !important;
 }
+@media screen and (min-width: 480px) {
+  .kCznXV {
+    background-size: auto !important;
+  }
+}
