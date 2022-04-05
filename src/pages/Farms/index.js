@@ -67,7 +67,7 @@ export default function Pool() {
   useEffect(() => {
     try {
       document.body.classList.remove('body')
-    } catch (e) {}
+    } catch (e) { }
     userHistory()
     getData()
   }, [])
@@ -496,7 +496,7 @@ export default function Pool() {
                   <div className="farm_content">
                     <h1>Farm Anytime, Get Rewards Instantly.</h1>
                     <p className="ule_imgset">
-                      It's a good day to farm some Wire.
+                      It's a good day to farm some Whe.
                       <img src={icon} />
                     </p>
                   </div>
@@ -513,7 +513,7 @@ export default function Pool() {
                       <img src={icon} className="farm_log_set" alt="logo" />
                     </div>
                     <div className="farm_heading">
-                      <h2>Wire </h2>
+                      <h2>Whe </h2>
                     </div>
                     <div className="farm_capital">
                       <div className="farm_total">
@@ -526,7 +526,7 @@ export default function Pool() {
                     <div className="farm_heading">
                       <div className="farm_flex_set">
                         <div className="farm_logo ar_drp">
-                          <span>WireCoin</span>
+                          <span>WheCoin</span>
                         </div>
                         {/* <!-----ule animation start--> */}
                         <div className="farm_logo farm_logo_group ule_img_height ule_animation"></div>
@@ -618,7 +618,7 @@ export default function Pool() {
                     </div>
                   </div>
                   <div className="farm_usd_set">
-                    <p>Get wire - wire</p>
+                    <p>Get whe - whe</p>
                   </div>
                   <div className="farm_usd_set farm_input">
                     <div className="row">

@@ -35,12 +35,12 @@ const config: MenuEntry[] = [
   {
     label: 'Game',
     icon: 'TeamBattleIcon',
-    href: 'https://lovely-hotteok-152323.netlify.app',
+    href: 'https://www.game.wheswap.io',
   },
   {
     label: 'Game 2',
     icon: 'TeamBattleIcon',
-    href: 'https://chic-manatee-abdfe2.netlify.app',
+    href: 'https://www.game2.wheswap.io',
   },
   // ,
   // {

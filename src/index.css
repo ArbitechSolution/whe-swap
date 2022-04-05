@@ -407,6 +407,22 @@
   background: #1c3254 !important;
   /* color: #749BD8; */
 }
+.jSNiHo:active,.jmcbFC:active{
+  box-shadow: inset 4px 0px 0px #272674  !important;
+}
+.evqhkY:active,.jmcbFC:active{
+background-color: transparent !important;
+}
+.evqhkY:focus{
+background-color: transparent !important;
+}
+.jmcbFC ,.gBGBRU
+,.evqhkY,.kWYeBS{
+  background-color: transparent !important;
+  box-shadow: none !important;
+
+}
+
 /* .question {
   color: #000 !important;
   background-color: rgb(215 202 236) !important;
@@ -463,7 +479,8 @@
 /* .cjuMmG {
   margin: 0px 20px !important ;
 } */
-.jeAreS {
+.jeAreS,
+.iYAzYL {
   margin-top: 10px !important;
 }
 .kdxFnu,
@@ -484,7 +501,11 @@
   margin: 10px 0px !important;
 }
 @media screen and (min-width: 480px) {
-  .kCznXV {
+  .kCznXV,
+   .fVTnYc{
     background-size: auto !important;
   }
+}
+.bzzZRT,.dZWQlv{
+  background-color: #102648!important;
 }

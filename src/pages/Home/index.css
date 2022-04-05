@@ -58,16 +58,22 @@
   background-image: url(./backgeoundimg.jpg) !important;
   background-repeat: no-repeat;
   background-position: center 0px, 10% 230px, 90% 230px !important;
-  background-size: contain, 100, 100;
+  background-size: contain, 100, 100 !important;
   min-height: 80vh !important;
   /* height: 100vh !important; */
 }
 
 @media (max-width: 480px) {
   .kCznXV,
-  .fVTnYc {
+  .fVTnYc
+   {
     padding: 0 10px !important;
   }
+}
+@media screen and (min-width: 968px)
+{.fVTnYc {
+  background-size: contain, 100, 100 !important;
+}
 }
 body {
   font-family: Kanit, sans-serif !important;
