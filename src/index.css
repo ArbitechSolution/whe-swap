@@ -226,10 +226,23 @@
 .token-amount-input::placeholder {
   color: black !important;
 }
-.fVzdOE,
+.fVzdOE{
+  background-color: #171798 !important;
+color:  #fff !important;
+}
 .gcuAnX {
-  background-color: #e5e7e7 !important;
+  /* background-color: #e5e7e7 !important; */
+  
   color: #000 !important;
+}
+.evUAka {
+  
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.hyBudw{
+background-color: #fff !important;
+color: #fff !important;
 }
 .btnAddLiqidity {
   background-color: #1263f1 !important;
@@ -508,4 +521,13 @@ background-color: transparent !important;
 }
 .bzzZRT,.dZWQlv{
   background-color: #102648!important;
+}
+.hUqpFS,.iHQmOP,.eUyVkd,.eWTblq,
+.eUyVkd, .jibsak,.eRXwyG{
+background-color: #fff !important;
+color: #000 !important;
+}
+.hgQjmC,.kVQlAV,.jEqguw{
+  background-color: #fff !important;
+  color: #000 !important;
 }

@@ -37,8 +37,9 @@ var _SOLIDITY_TYPE_MAXIMA;
 
 // var FACTORY_ADDRESS = '0x1730484cd33Fb46B22177f3Ffe8E002b4D7E3600';
 // var INIT_CODE_HASH = '0xe1a4292e78925c53bcb106503ec2c9a30c35f3fde4c084afc5af611bcffde55b';
-
-var FACTORY_ADDRESS = '0xc1BeAc7A21A701f51217f60c16f4844f4304edc6';
+// var FACTORY_ADDRESS = '0x908e0E7Adc65C9c203FF59635938A24E1FAa609b';
+// var INIT_CODE_HASH = '0x9bd282cc67353b48ff306333f879b5b62cf2807fda3d45cfaf007b0a5f1a1d6f';
+var FACTORY_ADDRESS = '0xD9DBe9B223491c170522611002026671c81DDCC9';
 var INIT_CODE_HASH = '0x0900094b1df5db1479b9484900ab524d1c832680efa977f8636c14ba835c74b6';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
@@ -438,7 +439,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.BSCTESTNET] = /*#__PURE__*/new Token(exports.ChainId.BSCTESTNET, '0x0dE8FCAE8421fc79B29adE9ffF97854a424Cad09', 18, 'WBNB', 'Wrapped BNB'), _WETH);
+var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.BSCTESTNET] = /*#__PURE__*/new Token(exports.ChainId.BSCTESTNET, '0xD92c5169faf023Cd97E7B18aaB930815b464b79b', 18, 'WBNB', 'Wrapped BNB'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);

@@ -31,16 +31,22 @@ const config: MenuEntry[] = [
     label: 'Farms',
     icon: 'FarmIcon',
     href: '/farms',
+    // target:"_blank",
+
   },
   {
     label: 'Game',
     icon: 'TeamBattleIcon',
     href: 'https://www.game.wheswap.io',
+    swiping:true
+    // target:'_blank',
   },
   {
     label: 'Game 2',
     icon: 'TeamBattleIcon',
     href: 'https://www.game2.wheswap.io',
+    swiping:true
+    // target:"_blank",
   },
   // ,
   // {

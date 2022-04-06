@@ -90,6 +90,13 @@ const BAD_RECIPIENT_ADDRESSES: string[] = [
   // '0x1730484cd33Fb46B22177f3Ffe8E002b4D7E3600', // v2 factory
   // '0xE1B2Fc6759a6BbC959E440F79993cCD09956928A', // v2 router 01
   // '0x3aC66471258aA543D73ed3D1087048F23566Ef6F', // v2 router 02
+  
+  //// testnet
+  // '0x908e0E7Adc65C9c203FF59635938A24E1FAa609b', // v2 factory
+  // '0x4464cc44c316CeD7bc11ef991810ee1d1a2dF7C3', // v2 router 01
+  // '0xfBab3A8f7567671C14a5AC45D768D0755541DEb8', // v2 router 02
+  
+  ////mainnet
   '0xc1BeAc7A21A701f51217f60c16f4844f4304edc6', // v2 factory
   '0xa696974E6DBe505C73d2d7C594136e8fBB5f40E5', // v2 router 01
   '0x9dd4A2fca5b09c8cc8961A7Ad847507b5F8325e9', // v2 router 02

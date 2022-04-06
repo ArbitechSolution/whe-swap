@@ -35,6 +35,7 @@ const Menu: React.FC = (props) => {
       return true;
     }
   }
+  console.log('links ==>',links )
   return (
     <>
       {getUrl()? (

@@ -18,10 +18,7 @@
   top: 22px;
   left: 16px;
 }
-.custom_logo_set a {
-}
-.custom_logo_set a img {
-}
+
 .contact {
   z-index: 9;
 }
@@ -58,7 +55,7 @@
   background-image: url(./backgeoundimg.jpg) !important;
   background-repeat: no-repeat;
   background-position: center 0px, 10% 230px, 90% 230px !important;
-  background-size: contain, 100, 100 !important;
+  /* background-size: contain, 100, 100 !important; */
   min-height: 80vh !important;
   /* height: 100vh !important; */
 }
@@ -137,10 +134,7 @@ li {
   border: unset;
   color: #fff;
 }
-.bp_heading {
-}
-.bp_heading2 {
-}
+
 .bp_heading {
   padding: 32px 16px;
   /*background: linear-gradient( 139.73deg, rgb(230, 253, 255) 0%, rgb(243, 239, 255) 100%);*/
@@ -188,14 +182,12 @@ li {
 .logo_wheswap {
   margin-top: 48px !important;
 }
-.bp_heading h2 a span {
-}
+
 .bp_heading h2 a img {
   height: 69px;
 }
 /*----farm section css ---*/
-.farm_staking {
-}
+
 .farm {
   padding: 24px;
   margin: 2rem 0;
@@ -224,8 +216,7 @@ li {
   color: rgb(189, 194, 196);
   margin: 45px 0px;
 }
-.wallet_btn {
-}
+
 .wallet_btn button {
   width: 100%;
   color: #fff;
@@ -237,8 +228,7 @@ li {
 .wallet_btn {
   margin: 6px 0;
 }
-.meta_btn {
-}
+
 .meta_btn img {
   height: 17px;
   padding-right: 7px;
@@ -248,8 +238,7 @@ li {
   padding: 9px 0 !important;
   border-radius: 16px;
 }
-.announce_news {
-}
+
 .announce_news iframe {
   border-left: 0;
   border-top: 1px solid #eee;

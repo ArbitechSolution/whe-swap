@@ -8,6 +8,7 @@ export declare const links: ({
     label: string;
     icon: string;
     href: string;
+    target?:string;
     items?: undefined;
     status?: undefined;
     calloutClass?: undefined;
@@ -25,6 +26,7 @@ export declare const links: ({
     label: string;
     icon: string;
     href: string;
+    target?:string;
     status: LinkStatus;
     items?: undefined;
     calloutClass?: undefined;
