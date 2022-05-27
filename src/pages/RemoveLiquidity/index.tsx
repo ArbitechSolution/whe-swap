@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useMemo, useState ,useEffect} from 'react'
+import React, { useCallback, useContext, useMemo, useState, useEffect } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import { splitSignature } from '@ethersproject/bytes'
 import { Contract } from '@ethersproject/contracts'
@@ -40,7 +40,7 @@ import { useBurnActionHandlers, useDerivedBurnInfo, useBurnState } from '../../s
 
 import { Field } from '../../state/burn/actions'
 import { useUserDeadline, useUserSlippageTolerance } from '../../state/user/hooks'
-
+import { approveRemoveLiquidity } from './approve'
 const OutlineCard = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 16px;
@@ -110,6 +110,11 @@ export default function RemoveLiquidity({
   async function onAttemptToApprove() {
     if (!pairContract || !pair || !library) throw new Error('missing dependencies')
     const liquidityAmount = parsedAmounts[Field.LIQUIDITY]
+
+    console.log('liquidityAmount', liquidityAmount)
+    const liq = liquidityAmount?.raw.toString()
+    const add = liquidityAmount?.token?.address
+    await approveRemoveLiquidity(liq, add, account)
     if (!liquidityAmount) throw new Error('missing liquidity amount')
     // try to gather a signature for permission
     const nonce = await pairContract.nonces(account)
@@ -152,23 +157,23 @@ export default function RemoveLiquidity({
       message,
     })
 
-    library
-      .send('eth_signTypedData_v4', [account, data])
-      .then(splitSignature)
-      .then((signature) => {
-        setSignatureData({
-          v: signature.v,
-          r: signature.r,
-          s: signature.s,
-          deadline: deadlineForSignature,
-        })
-      })
-      .catch((e) => {
-        // for all errors other than 4001 (EIP-1193 user rejected request), fall back to manual approve
-        if (e?.code !== 4001) {
-          approveCallback()
-        }
-      })
+    // library
+    //   .send('eth_signTypedData_v4', [account, data])
+    //   .then(splitSignature)
+    //   .then((signature) => {
+    //     setSignatureData({
+    //       v: signature.v,
+    //       r: signature.r,
+    //       s: signature.s,
+    //       deadline: deadlineForSignature,
+    //     })
+    //   })
+    //   .catch((e) => {
+    //     // for all errors other than 4001 (EIP-1193 user rejected request), fall back to manual approve
+    //     if (e?.code !== 4001) {
+    //       approveCallback()
+    //     }
+    //   })
   }
 
   // wrapped onUserInput to clear signatures
@@ -243,18 +248,30 @@ export default function RemoveLiquidity({
     else if (signatureData !== null) {
       // removeLiquidityETHWithPermit
       if (oneCurrencyIsETH) {
-        methodNames = ['removeLiquidityETHWithPermit', 'removeLiquidityETHWithPermitSupportingFeeOnTransferTokens']
+        // methodNames = ['removeLiquidityETHWithPermit', 'removeLiquidityETHWithPermitSupportingFeeOnTransferTokens']
+        methodNames = ['removeLiquidityETH']
+
+        // args = [
+        //   currencyBIsETH ? tokenA.address : tokenB.address,
+        //   liquidityAmount.raw.toString(),
+        //   amountsMin[currencyBIsETH ? Field.CURRENCY_A : Field.CURRENCY_B].toString(),
+        //   amountsMin[currencyBIsETH ? Field.CURRENCY_B : Field.CURRENCY_A].toString(),
+        //   account,
+        //   signatureData.deadline,
+        //   false,
+        //   signatureData.v,
+        //   signatureData.r,
+        //   signatureData.s,
+        // ]
         args = [
           currencyBIsETH ? tokenA.address : tokenB.address,
           liquidityAmount.raw.toString(),
-          amountsMin[currencyBIsETH ? Field.CURRENCY_A : Field.CURRENCY_B].toString(),
-          amountsMin[currencyBIsETH ? Field.CURRENCY_B : Field.CURRENCY_A].toString(),
+          // amountsMin[currencyBIsETH ? Field.CURRENCY_A : Field.CURRENCY_B].toString(),
+          // amountsMin[currencyBIsETH ? Field.CURRENCY_B : Field.CURRENCY_A].toString(),
+          0,
+          0,
           account,
           signatureData.deadline,
-          false,
-          signatureData.v,
-          signatureData.r,
-          signatureData.s,
         ]
       }
       // removeLiquidityETHWithPermit
@@ -280,9 +297,10 @@ export default function RemoveLiquidity({
     const safeGasEstimates: (BigNumber | undefined)[] = await Promise.all(
       methodNames.map((methodName, index) =>
         router.estimateGas[methodName](...args)
+          // .then(router.approve(args[account], '0xaEc8510eFb1c6E082C33F99394035cc743C2Ec04').call())
           .then(calculateGasMargin)
           .catch((e) => {
-            console.error(`estimateGas failed`, index, methodName, args, e)
+            console.error(`estimateGas failed `, index, methodName, args, e)
             return undefined
           })
       )
@@ -442,11 +460,11 @@ export default function RemoveLiquidity({
     Number.parseInt(parsedAmounts[Field.LIQUIDITY_PERCENT].toFixed(0)),
     liquidityPercentChangeCallback
   )
-  useEffect(()=>{
-    try{
-    document.body.classList.remove('body');
-    }catch(e){}
-  },[])
+  useEffect(() => {
+    try {
+      document.body.classList.remove('body')
+    } catch (e) {}
+  }, [])
   return (
     <>
       <AppBody>
@@ -643,6 +661,7 @@ export default function RemoveLiquidity({
                 ) : (
                   <RowBetween>
                     <Button
+                      // onClick={() => approveRemoveLiquidity(liquidityAmount.raw.toString())}
                       onClick={onAttemptToApprove}
                       variant={approval === ApprovalState.APPROVED || signatureData !== null ? 'success' : 'primary'}
                       disabled={approval !== ApprovalState.NOT_APPROVED || signatureData !== null}

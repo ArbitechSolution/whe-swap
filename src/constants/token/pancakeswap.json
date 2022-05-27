@@ -19,12 +19,12 @@
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xe02df9e3e622debdd69fb838bb799e3f168902c5.png"
     },
     {
-      "name": "WIRE",
-      "symbol": "WIRE",
-      "address": "0x3b3CD14d6D2fc39A68630582c2EB8ec98C21A81e",
+      "name": "WHE",
+      "symbol": "WHE",
+      "address": "0x2dECB6d8789777910cA5e425370Bc9b6e5Eb7B9c",
       "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://wireswap.io/images/coins/wire.jpeg"
+      "logoURI": "https://wireswap.io/images/coins/whe.jpeg"
     },
     {
       "name": "Ethereum",

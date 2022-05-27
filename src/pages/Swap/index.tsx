@@ -105,12 +105,14 @@ const Swap = () => {
 
   const handleTypeInput = useCallback(
     (value: string) => {
-      onUserInput(Field.INPUT, value)
+      console.log('handleTypeInput', value)
+      +(Field.INPUT, value)
     },
     [onUserInput]
   )
   const handleTypeOutput = useCallback(
     (value: string) => {
+      console.log('handleTypeOutput', value)
       onUserInput(Field.OUTPUT, value)
     },
     [onUserInput]
@@ -326,9 +328,9 @@ const Swap = () => {
                 showMaxButton={!atMaxAmountInput}
                 currency={currencies[Field.INPUT]}
                 onUserInput={handleTypeInput}
-                onMax={handleMaxInput}
                 onCurrencySelect={handleInputSelect}
                 otherCurrency={currencies[Field.OUTPUT]}
+                onMax={handleMaxInput}
                 id="swap-currency-input"
               />
               <AutoColumn justify="space-between">
@@ -353,16 +355,31 @@ const Swap = () => {
                   ) : null}
                 </AutoRow>
               </AutoColumn>
+              {/* <CurrencyInputPanel
+                label={
+                  independentField === Field.OUTPUT && !showWrap && trade
+                    ? TranslateString(194, 'From (estimated)')
+                    : TranslateString(76, 'From')
+                }
+                value={formattedAmounts[Field.INPUT]}
+                showMaxButton={!atMaxAmountInput}
+                currency={currencies[Field.INPUT]}
+                onUserInput={handleTypeInput}
+                onCurrencySelect={handleInputSelect}
+                otherCurrency={currencies[Field.OUTPUT]}
+                onMax={handleMaxInput}
+                id="swap-currency-input"
+              /> */}
               <CurrencyInputPanel
-                value={formattedAmounts[Field.OUTPUT]}
-                onUserInput={handleTypeOutput}
                 label={
                   independentField === Field.INPUT && !showWrap && trade
                     ? TranslateString(196, 'To (estimated)')
                     : TranslateString(80, 'To')
                 }
+                value={formattedAmounts[Field.OUTPUT]}
                 showMaxButton={false}
                 currency={currencies[Field.OUTPUT]}
+                onUserInput={handleTypeOutput}
                 onCurrencySelect={handleOutputSelect}
                 otherCurrency={currencies[Field.INPUT]}
                 id="swap-currency-output"

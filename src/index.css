@@ -226,23 +226,22 @@
 .token-amount-input::placeholder {
   color: black !important;
 }
-.fVzdOE{
+.fVzdOE {
   background-color: #171798 !important;
-color:  #fff !important;
+  color: #fff !important;
 }
 .gcuAnX {
   /* background-color: #e5e7e7 !important; */
-  
+
   color: #000 !important;
 }
 .evUAka {
-  
   background-color: #fff !important;
   color: #000 !important;
 }
-.hyBudw{
-background-color: #fff !important;
-color: #fff !important;
+.hyBudw {
+  background-color: #fff !important;
+  color: #fff !important;
 }
 .btnAddLiqidity {
   background-color: #1263f1 !important;
@@ -420,20 +419,23 @@ color: #fff !important;
   background: #1c3254 !important;
   /* color: #749BD8; */
 }
-.jSNiHo:active,.jmcbFC:active{
-  box-shadow: inset 4px 0px 0px #272674  !important;
+.jSNiHo:active,
+.jmcbFC:active {
+  box-shadow: inset 4px 0px 0px #272674 !important;
 }
-.evqhkY:active,.jmcbFC:active{
-background-color: transparent !important;
+.evqhkY:active,
+.jmcbFC:active {
+  background-color: transparent !important;
 }
-.evqhkY:focus{
-background-color: transparent !important;
+.evqhkY:focus {
+  background-color: transparent !important;
 }
-.jmcbFC ,.gBGBRU
-,.evqhkY,.kWYeBS{
+.jmcbFC,
+.gBGBRU,
+.evqhkY,
+.kWYeBS {
   background-color: transparent !important;
   box-shadow: none !important;
-
 }
 
 /* .question {
@@ -515,19 +517,27 @@ background-color: transparent !important;
 }
 @media screen and (min-width: 480px) {
   .kCznXV,
-   .fVTnYc{
+  .fVTnYc {
     background-size: auto !important;
   }
 }
-.bzzZRT,.dZWQlv{
-  background-color: #102648!important;
+.bzzZRT,
+.dZWQlv {
+  background-color: #102648 !important;
 }
-.hUqpFS,.iHQmOP,.eUyVkd,.eWTblq,
-.eUyVkd, .jibsak,.eRXwyG{
-background-color: #fff !important;
-color: #000 !important;
+.hUqpFS,
+.iHQmOP,
+.eUyVkd,
+.eWTblq,
+.eUyVkd,
+.jibsak,
+.eRXwyG {
+  background-color: #fff !important;
+  color: #000 !important;
 }
-.hgQjmC,.kVQlAV,.jEqguw{
+.hgQjmC,
+.kVQlAV,
+.jEqguw {
   background-color: #fff !important;
   color: #000 !important;
 }
