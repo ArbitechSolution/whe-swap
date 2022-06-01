@@ -106,7 +106,7 @@ const Swap = () => {
   const handleTypeInput = useCallback(
     (value: string) => {
       console.log('handleTypeInput', value)
-      +(Field.INPUT, value)
+      onUserInput(Field.INPUT, value)
     },
     [onUserInput]
   )
